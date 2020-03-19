@@ -1,0 +1,17 @@
+<%= form_with(model: mountain_model, local: true) do |form| %>
+  <% if mountain_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mountain_model.errors.count, "error") %> prohibited this mountain_model from being saved:</h2>
+
+      <ul>
+        <% mountain_model.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

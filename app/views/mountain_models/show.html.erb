@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @mountain_model.name %></h1>
+<div>Height: <%= number_with_delimiter(@mountain_model.height, :delimiter => ',') %></div>
+<p>Location: <%= @mountain_model.location %>
+	<br>
+	<br>
+   <%= @mountain_model.description %>	
+</p>
+
+<%= link_to 'Edit', edit_mountain_model_path(@mountain_model) %> |
+<%= link_to 'Back', mountain_models_path %>

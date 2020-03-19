@@ -1,0 +1,2 @@
+class MountainModel < ApplicationRecord
+end
