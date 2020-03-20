@@ -10,13 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_18_193605) do
+ActiveRecord::Schema.define(version: 2020_03_20_003931) do
 
   create_table "mountain_models", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.text "description"
     t.integer "height"
+    t.string "photo_file_name"
+    t.string "photo_content_type"
+    t.bigint "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.string "email"
+    t.string "username"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
 end
