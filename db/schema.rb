@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_20_003931) do
+ActiveRecord::Schema.define(version: 2020_03_20_191419) do
 
   create_table "mountain_models", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 2020_03_20_003931) do
     t.string "photo_content_type"
     t.bigint "photo_file_size"
     t.datetime "photo_updated_at"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
   end
 
   create_table "users", force: :cascade do |t|
