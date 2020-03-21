@@ -7,10 +7,8 @@
 <div><%= @mountain_model.longitude %>, <%= @mountain_model.latitude %></div>
 <div><%= @mountain_model.description %></div>
 <p>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{@mountain_model.latitude},#{@mountain_model.longitude}&key=AIzaSyDcDbYD4JRnuw9-YizdV-uWa5gtHW0HDjs", alt: "Map" %>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{@mountain_model.latitude},#{@mountain_model.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
 </p>
-
-
 
 <% if @mountain_model.photo.present? %>
 	<p><%= image_tag @post.photo.url(:medium) %></p>
