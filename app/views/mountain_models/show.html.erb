@@ -1,11 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <h1><%= @mountain_model.name %></h1>
-<div>Height: <%= number_with_delimiter(@mountain_model.height, :delimiter => ',') %></div>
-<div>Location: <%= @mountain_model.location %></div>
-<div>Address: <%= @mountain_model.address %></div>
-<div><%= @mountain_model.longitude %>, <%= @mountain_model.latitude %></div>
-<div><%= @mountain_model.description %></div>
+<div class="table-responsive">
+<table class="table">
+	<thead>
+		<tr>
+			<th>Height</th>
+			<th>Location</th>
+			<th>Address</th>
+			<th>Coordinates</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= number_with_delimiter(@mountain_model.height, :delimiter => ',') %></td>
+			<td><%= @mountain_model.location %></td>
+			<td><%= @mountain_model.address %></td>
+			<td><%= @mountain_model.longitude %>, <%= @mountain_model.latitude %></td>
+			<td><%= @mountain_model.description %></td>
+		</tr>
+	</tbody>
+</table>
+</div>
 <p>
 <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{@mountain_model.latitude},#{@mountain_model.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
 </p>

@@ -71,4 +71,11 @@ class MountainModelsController < ApplicationController
     def mountain_model_params
       params.fetch(:mountain_model, {})
     end
+
+    def new
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    end
 end
