@@ -12,7 +12,7 @@
   <tbody>
     <% @mountain_models.each do |mountain_model| %>
       <tr>
-        <td><%= link_to mountain_model.name, mountain_model %></td>
+        <td><b><button type="button" class="btn btn-link"><%= link_to mountain_model.name, mountain_model , style: "color:black"%></button></b></td>
         <td><%= link_to 'Edit', edit_mountain_model_path(mountain_model) %></td>
         </tr>
     <% end %>
