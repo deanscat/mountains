@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Mountains</h1>
+<h1 class="coloring">Mountains</h1>
 
 <table>
   <thead>
@@ -9,12 +9,12 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody >
     <% @mountain_models.each do |mountain_model| %>
-      <tr>
-        <td><b><button type="button" class="btn btn-link"><%= link_to mountain_model.name, mountain_model , style: "color:black"%></button></b></td>
+      <tr class="active">
+        <td><b><button type="button" class="btn-lg btn-link"><%= link_to mountain_model.name, mountain_model , style: "color:black;"%></button></b></td>
         <td><%= link_to 'Edit', edit_mountain_model_path(mountain_model) %></td>
-        </tr>
+      </tr>
     <% end %>
   </tbody>
 </table>

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @mountain_model.name %></h1>
+<h1 class="coloring"><%= @mountain_model.name %></h1>
 <div class="table-responsive">
  <table class="table">
  	<thead>
@@ -24,6 +24,9 @@
  </table>
  </div>
 <p>
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
 <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{@mountain_model.latitude},#{@mountain_model.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
 </p>
 
