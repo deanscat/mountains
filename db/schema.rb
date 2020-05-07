@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_20_191419) do
+ActiveRecord::Schema.define(version: 2020_05_07_224129) do
+
+# Could not dump table "comments" because of following StandardError
+#   Unknown type '' for column 'mountain_model'
 
   create_table "mountain_models", force: :cascade do |t|
     t.string "name"
@@ -36,4 +39,5 @@ ActiveRecord::Schema.define(version: 2020_03_20_191419) do
     t.string "password_digest"
   end
 
+  add_foreign_key "comments", "mountain_models"
 end

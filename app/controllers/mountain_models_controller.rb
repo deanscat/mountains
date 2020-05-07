@@ -10,6 +10,8 @@ class MountainModelsController < ApplicationController
   # GET /mountain_models/1
   # GET /mountain_models/1.json
   def show
+    @comments = @mountain_model.comments.all
+    @comment = @mountain_model.comments.build
   end
 
   # GET /mountain_models/new
