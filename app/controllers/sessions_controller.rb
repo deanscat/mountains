@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      redirect_to user
+      redirect_to mountain_models_url
     else
       flash.now[:danger] = 'Bad email/password combination. Try again.'
       render 'new'
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     @current_user = nil
-    redirect_to site_home_path
+    redirect_to mountain_models_url
   end
 end
 
