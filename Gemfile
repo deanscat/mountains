@@ -63,3 +63,5 @@ gem 'gmaps4rails'
 gem "actionview", ">= 6.0.2.2"
 
 gem 'jquery-rails'
+
+gem 'paperclip'
